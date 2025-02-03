@@ -10,7 +10,7 @@ function App() {
 
   const [feedback, setFeedback] = useState(() => {
 
-let data = JSON.parse(localStorage.getItem("localData"));
+let data = JSON.parse(localStorage.getItem("saved-feedbacks"));
 
     if (data !== null) {
       return data;
@@ -56,7 +56,7 @@ let data = JSON.parse(localStorage.getItem("localData"));
       <Description />
       <Options
         updateFeedback={updateFeedback}
-        resetFeedBack={resetFeedback}
+        resetFeedback={resetFeedback}
         totalFeedback={totalFeedback}
       />
       
